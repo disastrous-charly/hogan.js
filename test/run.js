@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var jsdom = require('jsdom').jsdom;
+var { JSDOM } = require('jsdom');
 var step = require('step');
 
 step(function() {
@@ -26,7 +26,8 @@ function run(file, callback) {
     if (err) throw err;
     var html = buffer.toString();
     var url = path.resolve('.', path.dirname(file));
-    var window = jsdom(html, null, {url: url + '/'}).createWindow();
+    var dom = new JSDOM(html, { url: url + '/' });
+    var window = dom.window;
     // silence QUnit error logging
     if (window.console) {
       window.console.error = window.console.warn = function(){};

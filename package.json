@@ -1,14 +1,14 @@
 {
   "name": "hogan.js"
   , "description": "A mustache compiler."
-  , "version": "3.0.2"
+  , "version": "3.1.0"
   , "keywords": ["mustache", "template"]
   , "main": "./lib/hogan.js"
   , "homepage": "https://twitter.github.com/hogan.js/"
   , "author": "Twitter Inc."
   , "repository": {
     "type": "git"
-    , "url": "https://github.com/twitter/hogan.js.git"
+    , "url": "https://github.com/disastrous-charly/hogan.js"
   }
   , "license": "Apache-2.0"
   , "dependencies" : {
@@ -16,7 +16,7 @@
     }
   , "devDependencies": {
       "uglify-js": "2.x"
-    , "jsdom": "0.3.4"
+    , "jsdom": "^16.7.0"
     , "step": "0.0.5"
     , "rimraf": "2.0.1"
   }
